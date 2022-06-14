@@ -31,10 +31,22 @@ $(function (){
         //^ get About where About id != ''
         headers: auth_header,
         success: function(data){
-            console.log('success', data)
+            //console.log('success', data)
             //efficiency second, this is just to familiarize me
             var about = filterAboutByID(data.records, "rec0edkqSx4BJUoXR") //for now still hardcoded my own id here
-            console.log(about)
+            document.getElementById('about-description').innerHTML = about
+        }
+    });
+});
+
+$(function (){
+    $.ajax({
+        type: 'GET',
+        url: 'https://api.airtable.com/v0/appPucj1FvmbK3LL4/Experience?filterByFormula=NOT%28%7BExperience%20ID%7D%20%3D%20%27%27%29',
+        //^ get About where About id != ''
+        headers: auth_header,
+        success: function(data){
+            console.log('success', data)
         }
     });
 });
