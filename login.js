@@ -22,9 +22,9 @@ form.addEventListener('submit', (e) => {
             //reset email password
             email.value = ''
             password.value = ''
-            //save idToken to cookie for verification
-            //setCookie("idToken",data.idToken,1)
-            setCookie("idToken", data.idToken, 1);
+            //save idToken to session bcs its safer than cookie
+            sessionStorage.setItem("id-token", data.idToken)
+            window.location.replace("./index_firebase.html")
         },
         error: function(){
             alert('something went wrong')
@@ -33,16 +33,3 @@ form.addEventListener('submit', (e) => {
         }
     })
 })
-
-function setCookie(name, value, days)
-{
-  if (days)
-  {
-    var date = new Date();
-    date.setTime(date.getTime()+days*24*60*60*1000); // ) removed
-    var expires = "; expires=" + date.toGMTString(); // + added
-  }
-  else
-    var expires = "";
-  document.cookie = name+"=" + value+expires + ";path=/"; // + and " added
-}
