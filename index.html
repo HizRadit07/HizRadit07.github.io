@@ -4,56 +4,105 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hizkia Raditya</title>
-
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <main class="container">
+    <nav>
+      <a href="index.html" class="active">About</a>
+      <a href="projects.html">Projects</a>
+    </nav>
+
+    <!-- HERO -->
     <section class="hero">
       <h1>Hizkia Raditya</h1>
       <p class="tagline">
-        Machine Learning Engineer focused on financial risk & applied modeling.
+        Data Scientist building credit risk systems, NLP pipelines, and speech AI solutions.
       </p>
     </section>
 
-    <section class="about">
+    <!-- ABOUT -->
+    <section>
       <h2>About</h2>
-      <p>
-        I build data-driven systems with a focus on credit risk, modeling,
-        and practical machine learning in production environments.
-      </p>
-    </section>
-
-    <section class="projects">
-      <h2>Selected Work</h2>
-
-      <div class="project">
-        <h3>Credit Risk Scoring Model</h3>
+      <div class="card">
         <p>
-          Developed and evaluated ML models for NPL prediction on large-scale
-          banking datasets.
+          I’m a Data Scientist based in Jakarta with a background in Machine Learning,
+          Natural Language Processing, and Speech Processing. My work focuses on building
+          practical AI systems that operate at scale — particularly in financial risk
+          environments.
         </p>
-      </div>
 
-      <div class="project">
-        <h3>Audio Post-Processing Research</h3>
         <p>
-          Undergraduate thesis on improving clarity and quality of synthesized
-          speech through post-processing techniques.
+          I’ve developed end-to-end credit scoring systems on datasets exceeding 1M+ records,
+          built transformer-based NLP mapping systems, and conducted applied research in
+          Indonesian Text-to-Speech and voice cloning using VALL-E–based architectures.
         </p>
       </div>
     </section>
 
-    <section class="contact">
+    <!-- EXPERIENCE HIGHLIGHTS -->
+    <section>
+      <h2>Experience Highlights</h2>
+
+      <div class="card">
+        <h3>Data Scientist — Sharing Vision Indonesia</h3>
+        <p>
+          Developed a production-ready credit scoring system supporting lending workflows.
+          Designed pipelines covering ingestion, feature engineering, model training, and monitoring.
+          Built NPL prediction models on 1M+ records.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Associate Researcher — Institut Teknologi Bandung</h3>
+        <p>
+          Led applied research in Indonesian TTS and voice cloning.
+          Improved MOS by +0.61 and reduced WER by 19.71% using VALL-E–based architectures.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>AI Engineering Intern — Prosa.ai</h3>
+        <p>
+          Contributed to TTS and speech processing research.
+          Built normalization pipelines and assisted in voice cloning prototype development.
+        </p>
+      </div>
+
+    </section>
+
+    <!-- SKILLS -->
+    <section>
+      <h2>Core Skills</h2>
+      <div class="card">
+        <p>
+          Python · SQL · PySpark · scikit-learn · PyTorch · TensorFlow · Hugging Face ·
+          FastAPI · Docker · AWS/GCP
+        </p>
+        <p>
+          Specializations: Credit Risk Modeling, NLP, Speech Processing,
+          ML Pipeline Development, AI System Deployment.
+        </p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section>
       <h2>Contact</h2>
-      <p>
-        <a href="mailto:hizradit07@gmail.com">Email</a> ·
-        <a href="https://github.com/HizRadit07">GitHub</a> ·
-        <a href="https://www.linkedin.com/in/hizkiaraditya07/">LinkedIn</a>
-      </p>
+      <div class="card">
+        <p>
+          Jakarta, Indonesia  
+        </p>
+        <p>
+          <a href="mailto:hizradit07@gmail.com">Email</a> ·
+          <a href="https://www.linkedin.com/in/hizkiaraditya07/" target="_blank">LinkedIn</a>
+        </p>
+      </div>
     </section>
+
   </main>
 
+  <script src="script.js"></script>
 </body>
 </html>
