@@ -1,9 +1,11 @@
 :root {
   --bg: #0f1115;
   --surface: #161a22;
+  --surface-hover: #1c212b;
   --text-primary: #e6e6eb;
   --text-secondary: #a1a1aa;
   --accent: #7c83ff;
+  --border: #222633;
 }
 
 * {
@@ -25,33 +27,72 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
+/* container */
 .container {
   max-width: 800px;
   margin: 0 auto;
   padding: 4rem 1.5rem;
 }
 
-/* nav */
-nav {
+/* ========================= */
+/* NAV (new styled version)  */
+/* ========================= */
+
+.nav {
   display: flex;
-  gap: 1.5rem;
+  justify-content: center;
   margin-bottom: 3rem;
 }
 
-nav a {
-  color: var(--text-secondary);
-  font-weight: 500;
+.nav-links {
+  display: flex;
+  gap: 2rem;
 }
 
-nav a.active,
-nav a:hover {
+.nav-link {
+  position: relative;
+  text-decoration: none;
+  color: var(--text-secondary);
+  font-weight: 500;
+  padding: 0.4rem 0;
+  transition: color 0.25s ease;
+}
+
+.nav-link:hover {
   color: var(--text-primary);
 }
 
-/* sections */
+.nav-link.active {
+  color: var(--accent);
+}
+
+/* underline animation */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.25s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* ========================= */
+/* Sections                  */
+/* ========================= */
+
 section {
   margin-bottom: 3rem;
 }
@@ -71,16 +112,20 @@ h2 {
   font-size: 1.1rem;
 }
 
-/* cards */
+/* ========================= */
+/* Cards (refined version)   */
+/* ========================= */
+
 .card {
   background-color: var(--surface);
   padding: 1.5rem;
   border-radius: 12px;
   margin-bottom: 1.5rem;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid var(--border);
+  transition: background-color 0.25s ease, border-color 0.25s ease;
 }
 
 .card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  background-color: var(--surface-hover);
+  border-color: var(--accent);
 }

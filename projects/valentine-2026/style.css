@@ -1,0 +1,90 @@
+:root {
+  --bg: #0f1115;
+  --text-primary: #f5f5f5;
+  --text-secondary: #b5b5b5;
+  --accent: #ffb4c6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Georgia", serif;
+  background-color: var(--bg);
+  color: var(--text-primary);
+  line-height: 1.7;
+}
+
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 5rem 1.5rem;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.hero .small {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+}
+
+.hero h1 {
+  font-size: 2.6rem;
+  margin: 0.5rem 0;
+}
+
+.subtitle {
+  color: var(--accent);
+  font-size: 1rem;
+}
+
+/* MEMORY STRIP */
+.memories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-bottom: 4rem;
+}
+
+.memories img {
+  width: 100%;
+  border-radius: 14px;
+  object-fit: cover;
+  filter: grayscale(20%);
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.memories img:hover {
+  transform: scale(1.03);
+  filter: grayscale(0%);
+}
+
+/* MESSAGE */
+.message {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin-bottom: 4rem;
+}
+
+.message p {
+  margin-bottom: 1.5rem;
+}
+
+/* SIGN */
+.sign {
+  text-align: right;
+  font-style: italic;
+}
+
+.sign .name {
+  font-size: 1.4rem;
+  color: var(--accent);
+}
