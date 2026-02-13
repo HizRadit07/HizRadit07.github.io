@@ -15,6 +15,23 @@ if (yesBtn && noBtn) {
     "Really?",
     "Think again 😶",
     "Please?",
+    "Don’t do this 🥲",
+    "Are you sure?",
+    "Really?",
+    "Think again 😶",
+    "Please?",
+    "Don’t do this 🥲",    "Are you sure?",
+    "Really?",
+    "Think again 😶",
+    "Please?",
+    "Don’t do this 🥲",    "Are you sure?",
+    "Really?",
+    "Think again 😶",
+    "Please?",
+    "Don’t do this 🥲",    "Are you sure?",
+    "Really?",
+    "Think again 😶",
+    "Please?",
     "Don’t do this 🥲"
   ];
 
